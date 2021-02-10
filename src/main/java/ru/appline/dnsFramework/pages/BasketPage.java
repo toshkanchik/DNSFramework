@@ -27,7 +27,7 @@ public class BasketPage extends BasePage{
 
     public BasketPage checkItemHasWarranty(String item, warrantyEnum warranty) {
         List<WebElement> warrantyFields = findItemByName(item).
-                findElements(By.xpath("/div/div[@class='cart-items__additionals']/div/" +
+                findElements(By.xpath("./div/div[@class='cart-items__additionals']/div/" +
                         "div[@class='additional-warranties-row__warranties']/div/div/div/div/div/.."));
         String classField;
         String text;
