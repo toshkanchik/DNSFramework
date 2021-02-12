@@ -39,8 +39,8 @@ public class ProductPage extends BasePage{
     }
 
     public ProductPage clickBuy() {
-        Assertions.assertEquals(buttonBuy.getText(),"Купить", "Убедитесь, что такого товара нет в корзине");
         elementToBeClickable(buttonBuy);
+        Assertions.assertEquals(buttonBuy.getText(),"Купить", "Убедитесь, что такого товара нет в корзине");
         buttonBuy.click();
         wait.until(ExpectedConditions.textToBePresentInElement(buttonBuy, "В корзине"));
         return pages.getProductPage();

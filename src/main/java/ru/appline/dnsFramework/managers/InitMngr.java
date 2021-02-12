@@ -9,8 +9,8 @@ public class InitMngr {
 
     public static void InitAll() {
         getDriver().manage().window().maximize();
-//        getDriver().manage().timeouts().implicitlyWait(Integer.parseInt(props.getProperty("implicitly.wait")), TimeUnit.SECONDS);
-//        getDriver().manage().timeouts().pageLoadTimeout(Integer.parseInt(props.getProperty("page.load.timeout")), TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(Integer.parseInt(props.getProperty("implicitly.wait")), TimeUnit.SECONDS);
+        getDriver().manage().timeouts().pageLoadTimeout(Integer.parseInt(props.getProperty("page.load.timeout")), TimeUnit.SECONDS);
     }
 
     public static void closeAll() {
